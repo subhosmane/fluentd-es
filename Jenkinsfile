@@ -11,14 +11,14 @@ pipeline {
       }
     }
     stage('Building image') {
-      steps{
+      steps {
         script {
           dockerImage = docker.build registry + ":es"
         }
       }
     }
     stage('Deploy Image') {
-      steps{
+      steps {
         script {
           docker.withRegistry( '' ) {
             dockerImage.push()
