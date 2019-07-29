@@ -12,12 +12,13 @@ pipeline {
                     sh "ps -ef"
                 }
             } 
-            stage('push container image') {
+        }
+        stage('push container image') {
                 docker.withRegistry('https://docker-registry.hostingmgmt:5000') {
                     build_image.push()
+                    }
                 }
-              }
-            }
+        }
             
     }                
 }
