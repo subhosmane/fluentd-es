@@ -20,7 +20,7 @@ pipeline {
     stage('Deploy Image') {
       steps {
         script {
-          docker.withRegistry( '' ) {
+          docker.withRegistry( 'https://docker-registry.hostingmgmt:5000/' ) {
             dockerImage.push()
           }
         }
