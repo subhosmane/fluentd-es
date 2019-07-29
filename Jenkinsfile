@@ -1,5 +1,4 @@
 pipeline { 
-    checkout scm
     stages {
         stage('git url') {
             steps{
