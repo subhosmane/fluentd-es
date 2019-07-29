@@ -3,7 +3,7 @@ pipeline {
     env.WORKSPACE = pwd()
     stages {
             stage('Build from fluentd image') {
-            def build_image = docker.build("fluent/fluentd:v0.12-debian", "-f Dockerfile .")
+            def build_image = docker.build("fluentd-es", "-f Dockerfile .")
     
             build_image.inside {
             
