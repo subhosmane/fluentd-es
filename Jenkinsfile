@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "https://docker-registry.hostingmgmt:5000/fluentd"
+    registry = "https://docker-registry.hostingmgmt:5000"
     dockerImage = ''
   }
   agent any
