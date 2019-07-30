@@ -13,7 +13,7 @@ pipeline {
     stage('Building image') {
       steps {
         script {
-          dockerImage = docker.build "fluentd:es"
+          dockerImage = docker.build "fluentd:v2"
         }
       }
     }
